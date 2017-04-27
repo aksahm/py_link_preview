@@ -56,7 +56,13 @@
     
     Usage:-
         import link_preview
-        elem = link_preview.generate_dict(url)
+        dict_elem = link_preview.generate_dict(url) # this is a dict()
+        
+        # Access values
+        title = dict_elem['title']
+        description = dict_elem['description']
+        image = dict_elem['image']
+        website = dict_elem['website']
 '''
 
 import urllib.request as req
