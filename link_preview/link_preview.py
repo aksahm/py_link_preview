@@ -55,7 +55,7 @@
         #######################################
     
     Usage:-
-        import link_preview
+        from link_preview import link_preview
         dict_elem = link_preview.generate_dict(url) # this is a dict()
         
         # Access values
