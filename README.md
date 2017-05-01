@@ -73,4 +73,4 @@ to update, use
 		pip install -u link_preview
 
 ## License
-MIT
+MIT 
