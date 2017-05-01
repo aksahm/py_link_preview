@@ -7,7 +7,7 @@ try:
     long_description = long_description.replace("\r","")
 except:
     print('Long desc failure')
-        long_description = open('README.md')read()
+    long_description = open('README.md')read()
 
 setup(
     name = 'link_preview', # name of package
