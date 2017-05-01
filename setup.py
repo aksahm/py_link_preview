@@ -1,7 +1,13 @@
-import os, markdown
+import os
 from distutils.core import setup
 
-long_description = markdown.html(os.path.join(os.path.abspath(__file__), 'README.md'))
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+    long_description = long_description.replace("\r","")
+except(IOError, ImportError):
+    print('Long desc failure')
+    long_description = open('README.md').read()
 
 setup(
     name = 'link_preview', # name of package
