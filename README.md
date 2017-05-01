@@ -1,5 +1,8 @@
 # link_Preview
 
+A python module that gathers elements required for linkPreview. 
+
+## Overview
 link_preview is now a fashionable way of sharing links in social media. 
 The contents of what the preview is made up are:-
 
@@ -60,3 +63,14 @@ The contents of what the preview is made up are:-
         description = dict_elem['description']
         image = dict_elem['image']
         website = dict_elem['website']
+
+## Insatallation
+To install from pip, use the following command
+	
+		pip install link_preview
+to update, use
+
+		pip install -u link_preview
+
+## License
+MIT

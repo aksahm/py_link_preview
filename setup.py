@@ -1,7 +1,7 @@
 import os
 from distutils.core import setup
 
-with open(os.path.join(os.path.dirname(__file__)), 'README.md') as f:
+with open(os.path.join(os.path.dirname(__file__), 'README.md'), 'r') as f:
     long_description = f.read()
 
 setup(
@@ -16,6 +16,6 @@ setup(
     url = 'https://github.com/aakash4525/py_link_preview', # url of git repo
     download_url = 'https://github.com/aakash4525/py_link_preview/archive/v0.3.tar.gz', # git tagged tar.gz
     keywords = ['preview', 'link'],
-    platforms='Cross platform',
+    platforms='all',
     classifiers = []
 )
