@@ -70,7 +70,7 @@ To install from pip, use the following command
 		pip install link_preview
 to update, use
 
-		pip install -u link_preview
+		pip install -U link_preview
 
 ## License
 MIT 

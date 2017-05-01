@@ -3,7 +3,7 @@ from distutils.core import setup
 
 try:
     import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
+    long_description = pypandoc.convert(os.path.join(os.path.abspath(__file__),'README.md'), 'rst')
     long_description = long_description.replace("\r","")
 except:
     print('Long desc failure')
