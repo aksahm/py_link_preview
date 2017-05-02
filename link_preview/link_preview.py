@@ -90,18 +90,25 @@ def generate_dict(url):
             return_dict['title'] = og_dict['og.title']
         except KeyError:
             return_dict['title'] = find_title(html)
+    
     #     description
         try:
             return_dict['description'] = og_dict['og.description']
         except KeyError:
             return_dict['description'] = find_meta_desc(html)
+    
+    #     website
+        return_dict['website'] = find_host_website(url)
+    
     #     Image
         try:
             return_dict['image'] = og_dict['og.image']
         except KeyError:
-            return_dict['image'] = find_image(html)
+            image_path = find_image(html)
+            if 'http' not in image_path:
+                image_path = 'http://' + return_dict['website'] + image_path
+            return_dict['image'] = image_path
         
-        return_dict['website'] = find_host_website(url)
         return return_dict
     
     except Exception as e:
